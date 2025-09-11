@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+@font-face {
+  font-family: Daydream;
+  src: url('Daydream.ttf'); 
+}
+
+h1 {
+    font-family: daydream;
+}
+buttons {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+}
+
+:root {
+      --gridDivs: 64;
+      --paletteColor: #808080; 
+    }
+
+#container {
+    display: flex;
+    height: 600px;
+    width: 600px;
+    border: solid black 1.5px;
+    flex-wrap: wrap;
+}
+
+.gridItem {    
+    border: solid black .25px;
+    box-sizing: border-box;
+    flex: 0 0 calc(100% / var(--gridDivs));    
+}
+
+
+.color {
+    background-color: var(--paletteColor);
+}
+
+#colorPallete {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+     
+
+}
+#colorPalette button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    transition-duration: .5s;
+}
+#colorPalette button:hover {
+    scale: 1.2;
+    transition-duration: .5s;
+}
+#blackBtn {
+    background-color: #000000;
+}
+#whiteBtn {
+    background-color: #ffffff;
+}
+#pinkBtn {
+    background-color: #ff41a6;
+}
+#purpleBtn {
+    background-color: #6203bb;
+}
+#lilacBtn {
+    background-color: #b872fa;
+}
+#blueBtn {
+    background-color: #2fc8ff;
+}
+#yellowBtn {
+    background-color: #ffcf10;
+}
+
+
+
