@@ -1,5 +1,5 @@
 const container = document.getElementById("container");
-let numRows = 64;
+let numRows = 32;
 const divs = (numRows * numRows);
 const button = document.getElementById("divNumBtn")
 const btn = document.getElementById('clearCanvas');
@@ -16,50 +16,37 @@ const blueBtn = document.getElementById("blueBtn");
 const lilacBtn = document.getElementById("lilacBtn");
 const yellowBtn = document.getElementById("yellowBtn");
 
-// function card (name, description, image){
-//     this.name = name;
-//     this.description = description;
-//     this.image = image;
-// }
+var color = "color";
 
-// const colorPalette = [
 
-//     {name: "black", button: blackBtn, hex: "#000000"},
-//     {name: "white", button: whiteBtn, hex: "#ffffff"},
-//     {name: "pink", button: pinkBtn, hex: "#ff41a6"},
-//     {name: "purple", button: purpleBtn, hex: "#6203bb"},
-//     {name: "lilac", button: lilacBtn, hex: "#b872fa"},
-//     {name: "blue", button: blueBtn, hex: "#2fc8ff"},
-//     {name: "yellow", button: yellowBtn, hex: "#ffcf10"},
-   
-// ];
+
 
 blackBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#000000');
+    color = "black";
 };
 
 whiteBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#ffffff');
+    color = "white";
 };
 
 pinkBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#ff41a6');
+    color = "pink";
 };
 
 purpleBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#6203bb');
+    color="purple";
 };
 
 lilacBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#b872fa');
+    color="lilac";
 };
 
 blueBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#2fc8ff');
+    color = "blue";
 };
 
 yellowBtn.onclick = function() {
-root.style.setProperty('--paletteColor', '#ffcf10');
+    color = "yellow";
 };
 
 
@@ -76,7 +63,7 @@ function colorSketch(){
     grid.forEach((gridCell)=> {
         gridCell.addEventListener("click", ()=> {
 
-            gridCell.classList.add("color");
+            gridCell.classList.add(color);
         });
     });
 }
@@ -87,6 +74,13 @@ btn.addEventListener("click", function() {
     let grid = document.querySelectorAll('.gridItem');
     grid.forEach((gridCell)=> {
         gridCell.classList.remove("color");
+        gridCell.classList.remove("black");
+        gridCell.classList.remove("white");
+        gridCell.classList.remove("pink");
+        gridCell.classList.remove("yellow");
+        gridCell.classList.remove("blue");
+        gridCell.classList.remove("purple");
+        gridCell.classList.remove("lilac");
        
      });
 

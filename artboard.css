@@ -19,8 +19,7 @@ buttons {
 }
 
 :root {
-      --gridDivs: 64;
-      --paletteColor: #808080; 
+      --gridDivs: 32;
     }
 
 #container {
@@ -39,7 +38,7 @@ buttons {
 
 
 .color {
-    background-color: var(--paletteColor);
+    background-color: grey;
 }
 
 #colorPallete {
@@ -59,25 +58,25 @@ buttons {
     scale: 1.2;
     transition-duration: .5s;
 }
-#blackBtn {
+.black {
     background-color: #000000;
 }
-#whiteBtn {
+.white {
     background-color: #ffffff;
 }
-#pinkBtn {
+.pink {
     background-color: #ff41a6;
 }
-#purpleBtn {
+.purple {
     background-color: #6203bb;
 }
-#lilacBtn {
+.lilac {
     background-color: #b872fa;
 }
-#blueBtn {
+.blue {
     background-color: #2fc8ff;
 }
-#yellowBtn {
+.yellow {
     background-color: #ffcf10;
 }
 
