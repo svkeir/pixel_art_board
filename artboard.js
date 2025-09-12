@@ -8,6 +8,7 @@ let grid = document.querySelectorAll('.gridItem');
 
 const paletteDiv = document.getElementById('colorPalette'); 
 
+const greyBtn = document.getElementById("greyBtn");
 const blackBtn = document.getElementById("blackBtn");
 const whiteBtn = document.getElementById("whiteBtn");
 const pinkBtn = document.getElementById("pinkBtn");
@@ -19,7 +20,9 @@ const yellowBtn = document.getElementById("yellowBtn");
 var color = "color";
 
 
-
+greyBtn.onclick = function() {
+    color = "color";
+};
 
 blackBtn.onclick = function() {
     color = "black";
