@@ -1,5 +1,5 @@
 const container = document.getElementById("container");
-let numRows = 32;
+let numRows = 20;
 const divs = (numRows * numRows);
 const button = document.getElementById("divNumBtn")
 const btn = document.getElementById('clearCanvas');
@@ -60,10 +60,12 @@ for (let i=0; i < divs; i++) {
 
 function colorSketch(){
     let grid = document.querySelectorAll('.gridItem');
+    let clear = !color;
     grid.forEach((gridCell)=> {
         gridCell.addEventListener("click", ()=> {
 
             gridCell.classList.add(color);
+            gridCell.classList.remove(clear);
         });
     });
 }

@@ -19,7 +19,7 @@ buttons {
 }
 
 :root {
-      --gridDivs: 32;
+      --gridDivs: 20;
     }
 
 #container {
@@ -31,7 +31,7 @@ buttons {
 }
 
 .gridItem {    
-    border: solid black .25px;
+    border: solid lightblue .25px;
     box-sizing: border-box;
     flex: 0 0 calc(100% / var(--gridDivs));    
 }
