@@ -60,12 +60,15 @@ for (let i=0; i < divs; i++) {
 
 function colorSketch(){
     let grid = document.querySelectorAll('.gridItem');
-    let clear = !color;
+    let clear =!"color";
     grid.forEach((gridCell)=> {
         gridCell.addEventListener("click", ()=> {
 
+            gridCell.classList.remove("black", "white", "pink", "purple", "lilac", "yellow", "blue")
+           
+
             gridCell.classList.add(color);
-            gridCell.classList.remove(clear);
+           
         });
     });
 }
@@ -138,14 +141,3 @@ button.addEventListener("click", function() {
  
 
    colorSketch();
-
-
-
-
-
-
-
-
-
-
-
