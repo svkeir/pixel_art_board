@@ -78,14 +78,7 @@ function colorSketch(){
 btn.addEventListener("click", function() {
     let grid = document.querySelectorAll('.gridItem');
     grid.forEach((gridCell)=> {
-        gridCell.classList.remove("color");
-        gridCell.classList.remove("black");
-        gridCell.classList.remove("white");
-        gridCell.classList.remove("pink");
-        gridCell.classList.remove("yellow");
-        gridCell.classList.remove("blue");
-        gridCell.classList.remove("purple");
-        gridCell.classList.remove("lilac");
+        gridCell.classList.remove("black", "white", "pink", "purple", "lilac", "yellow", "blue")
        
      });
   
