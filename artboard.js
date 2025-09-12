@@ -85,8 +85,7 @@ btn.addEventListener("click", function() {
         gridCell.classList.remove("lilac");
        
      });
-
-    
+  
 });
 
 

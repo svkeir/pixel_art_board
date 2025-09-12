@@ -10,13 +10,21 @@ body {
   src: url('Daydream.ttf'); 
 }
 
-h1 {
+button {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    display: inline-block;
+    padding: 2px 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: daydream;
 }
-buttons {
-    font-family: 'Courier New', Courier, monospace;
-    display: inline-block;
-}
+
 
 :root {
       --gridDivs: 20;
@@ -24,14 +32,14 @@ buttons {
 
 #container {
     display: flex;
-    height: 600px;
-    width: 600px;
+    height: 580px;
+    width: 580px;
     border: solid black 1.5px;
     flex-wrap: wrap;
 }
 
 .gridItem {    
-    border: solid lightblue .25px;
+    border: solid lightgray .25px;
     box-sizing: border-box;
     flex: 0 0 calc(100% / var(--gridDivs));    
 }
