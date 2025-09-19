@@ -6,6 +6,20 @@ const btn = document.getElementById('clearCanvas');
 const root = document.documentElement;
 let grid = document.querySelectorAll('.gridItem');
 
+let isMouseDown = false;
+
+document.addEventListener('mousedown', () => {
+    isMouseDown = true;
+    console.log(isMouseDown);
+});
+
+
+document.addEventListener('mouseup', () => {
+    isMouseDown = false;
+    console.log(isMouseDown);
+});
+
+
 const paletteDiv = document.getElementById('colorPalette'); 
 
 const greyBtn = document.getElementById("greyBtn");
@@ -64,17 +78,28 @@ for (let i=0; i < divs; i++) {
 function colorSketch(){
     let grid = document.querySelectorAll('.gridItem');
     let clear =!"color";
+
     grid.forEach((gridCell)=> {
-        gridCell.addEventListener("click", ()=> {
 
-            gridCell.classList.remove("black", "white", "pink", "purple", "lilac", "yellow", "blue")
-           
+            
 
-            gridCell.classList.add(color);
-           
+        gridCell.addEventListener("mouseenter", ()=> {
+
+            if (isMouseDown) {
+
+                gridCell.classList.remove("black", "white", "pink", "purple", "lilac", "yellow", "blue",)
+                gridCell.classList.add(color);
+
+            }
+
+
         });
+            
+        
+            
     });
-}
+
+};
 
 
  
