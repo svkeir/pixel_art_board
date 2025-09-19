@@ -10,13 +10,13 @@ let isMouseDown = false;
 
 document.addEventListener('mousedown', () => {
     isMouseDown = true;
-    console.log(isMouseDown);
+
 });
 
 
 document.addEventListener('mouseup', () => {
     isMouseDown = false;
-    console.log(isMouseDown);
+
 });
 
 
