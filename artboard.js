@@ -13,7 +13,6 @@ document.addEventListener('mousedown', () => {
 
 });
 
-
 document.addEventListener('mouseup', () => {
     isMouseDown = false;
 
