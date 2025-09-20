@@ -21,8 +21,8 @@ document.addEventListener('mouseup', () => {
 
 const paletteDiv = document.getElementById('colorPalette'); 
 
-const pencilBtn = document.getElementById("pencil");
-const eraserBtn = document.getElementById("eraser");
+const pencilBtn = document.getElementById("pencilBtn");
+const eraserBtn = document.getElementById("eraserBtn");
 
 const blackBtn = document.getElementById("blackBtn");
 const whiteBtn = document.getElementById("whiteBtn");
@@ -48,7 +48,7 @@ pencilBtn.onclick = function () {
 }
 
 eraserBtn.onclick = function () {
-    color = "clear"
+    color = "eraser"
 }
 
 blackBtn.onclick = function() {
@@ -113,7 +113,13 @@ liteTealBtn.onclick = function() {
     color = "liteTeal";
 };
 
-let colorArray = ["black", "white", "pink", "litePink", "darkPink", "pastelPink", "purple", "litePurple", "darkPurple", "pastelPurple", "orange", "teal", "liteTeal", "yellow", "blue", "liteBlue", "color"]
+let colorArray = [
+    "black", "white", 
+    "pink", "litePink", "darkPink", "pastelPink", 
+    "purple", "litePurple", "darkPurple", "pastelPurple", 
+    "orange",  "yellow", "blue", "liteBlue", "teal", "liteTeal",
+    "eraser", "color", 
+]
 
 
 
@@ -136,7 +142,13 @@ function colorSketch(){
 
             if (isMouseDown) {
 
-                gridCell.classList.remove(colorArray)
+                gridCell.classList.remove(    
+                    "black", "white", 
+                    "pink", "litePink", "darkPink", "pastelPink", 
+                    "purple", "litePurple", "darkPurple", "pastelPurple", 
+                    "orange",  "yellow", "blue", "liteBlue", "teal", "liteTeal",
+                    "eraser", "color",
+                )
                 gridCell.classList.add(color);
 
             }
@@ -147,7 +159,13 @@ function colorSketch(){
                 gridCell.addEventListener("click", ()=> {
 
 
-                gridCell.classList.remove(colorArray)
+                gridCell.classList.remove(    
+                    "black", "white", 
+                    "pink", "litePink", "darkPink", "pastelPink", 
+                    "purple", "litePurple", "darkPurple", "pastelPurple", 
+                    "orange",  "yellow", "blue", "liteBlue", "teal", "liteTeal",
+                    "eraser", "color",
+                )
                 gridCell.classList.add(color);
 
 
@@ -165,7 +183,7 @@ function colorSketch(){
 clearBtn.addEventListener("click", function() {
     let grid = document.querySelectorAll('.gridItem');
     grid.forEach((gridCell)=> {
-        gridCell.classList.remove("black", "white", "pink", "litePink", "darkPink", "pastelPink", "purple", "litePurple", "darkPurple", "pastelPurple", "orange", "teal", "liteTeal", "yellow", "blue", "liteBlue", "color")
+        gridCell.classList.remove("black", "white", "pink", "litePink", "darkPink", "pastelPink", "purple", "litePurple", "darkPurple", "pastelPurple", "orange", "teal", "liteTeal", "yellow", "blue", "liteBlue", "eraser", "color",)
        
      });
   

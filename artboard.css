@@ -269,7 +269,7 @@ body {
     background-color: grey;
 }
 
-.clear {
-    background-color: var(--lite-color);
+.eraser {
+    background-color: #ece7fd;
 }
 
