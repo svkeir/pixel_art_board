@@ -175,7 +175,7 @@ clearBtn.addEventListener("click", function() {
 gridBtn.addEventListener("click", function() {
 
 
-   let input = prompt("Choose a number between 16 and 100:");
+   let input = prompt("Choose a number between 16 and 100 to generate new grid (ex: 64 generates a 64x64 grid):");
 
         if (input !== null) { 
             let number = parseFloat(input);
