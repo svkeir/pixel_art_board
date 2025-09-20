@@ -7,28 +7,91 @@
     <link rel="stylesheet" href="artboard.css">
 </head>
 <body>
-    <div id="tittle"><h2>Pixel Art Board</h2></div>
+    <div id="pxlPaint">
 
-    <div id="colorPalette"> 
-        <button id="greyBtn" class="grey"></button>
-        <button id="blackBtn" class="black"></button>
-        <button id="whiteBtn" class="white"></button> 
-        <button id="pinkBtn" class="pink"></button>
-        <button id="purpleBtn" class="purple"></button>
-        <button id="lilacBtn" class="lilac"></button>
-        <button id="blueBtn" class="blue"></button>
-        <button id="yellowBtn" class="yellow"></button>
+        <div id="topBar">
+
+            <div id="heading">
+                <img id="logo" src="assets/iconPallete.svg">
+                <div id="tittle"><h2>pxl.Paint</h2></div>
+            </div>
+
+            <div id="windowBtns">
+                <button class="btn2" id="window2Min">_</button>
+                <button class="btn2" id="window2Close">×</button>
+            </div>
+
+        </div>
+        <div id="screen">
+
+            <div id="toolBar">
+
+                <button id="toolBarHeader" class="textBtn">
+                    <img id="dropper" class="icon" src="assets/iconDroper.svg">
+                    <div>Color <br> Palette</div>
+                </button>
+                
+                <div id="colorPalette"> 
+                    <button id="blackBtn" class="black"></button>
+                    <button id="whiteBtn" class="white"></button>
+                    <button id="darkPurpleBtn" class="darkPurple"></button>
+                    <button id="purpleBtn" class="purple"></button>
+                    <button id="litePurpleBtn" class="litePurple"></button>
+                    <button id="pastelPurpleBtn" class="pastelPurple"></button>
+                    <button id="blueBtn" class="blue"></button>
+                    <button id="liteBlueBtn" class="liteBlue"></button> 
+                    <button id="tealBtn" class="teal"></button>
+                    <button id="liteTealBtn" class="liteTeal"></button>
+                    <button id="orangeBtn" class="orange"></button>
+                    <button id="yellowBtn" class="yellow"></button> 
+
+                    
+                    <button id="darkPinkBtn" class="darkPink"></button>
+                    <button id="pinkBtn" class="pink"></button>
+                    <button id="litePinkBtn" class="litePink"></button>
+                    <button id="pastelPinkBtn" class="pastelPink"></button>
+
+                    
+                    
+                </div>
+                <div id="bottomTools">
+                    <div id="toolSelect">
+                        <button id="pencil" class="color">
+                            <img src="assets/iconPencil.svg">
+                        </button>
+                        <button id="eraser" class="white">
+                            <img src="assets/iconEraser.svg">
+                        </button>
+                    </div> 
+
+                    <div id="canvasTools">
+
+                        <button id="divNumBtn" class="textBtn">
+                            <img id="clear" class="icon" src="assets/iconGrid.svg">
+                            <div>Change <br>Board</div>
+                        </button>
+
+                        <button id="clearCanvas" class="textBtn">
+                            <img id="clear" class="icon" src="assets/iconRefresh.svg">
+                            <div>Clear <br>Canvas</div>
+                        </button>     
+
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+            <div id="artBoard">
+                <div id="container"></div>
+            </div>
+
+        </div>
+
     </div>
-    
-    <br>
-    <div id="container"></div>
-    <br>
-      <div class="buttons">
-        <button id="divNumBtn">Change Board</button>
-        <!-- <button id="toggleGrid">Toggle Grid</button> -->
-        <button id="clearCanvas">Clear Canvas</button>
-        
-    </div>
+
     <script src="artboard.js"></script>
+
 </body>
 </html>

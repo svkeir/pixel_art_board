@@ -1,8 +1,8 @@
 const container = document.getElementById("container");
-let numRows = 20;
+let numRows = 32;
 const divs = (numRows * numRows);
-const button = document.getElementById("divNumBtn")
-const btn = document.getElementById('clearCanvas');
+const gridBtn = document.getElementById("divNumBtn")
+const clearBtn = document.getElementById('clearCanvas');
 const root = document.documentElement;
 let grid = document.querySelectorAll('.gridItem');
 
@@ -22,21 +22,35 @@ document.addEventListener('mouseup', () => {
 
 const paletteDiv = document.getElementById('colorPalette'); 
 
-const greyBtn = document.getElementById("greyBtn");
+const pencilBtn = document.getElementById("pencil");
+const eraserBtn = document.getElementById("eraser");
+
 const blackBtn = document.getElementById("blackBtn");
 const whiteBtn = document.getElementById("whiteBtn");
 const pinkBtn = document.getElementById("pinkBtn");
+const pastelPinkBtn = document.getElementById("pastelPinkBtn");
+const darkPinkBtn = document.getElementById("darkPinkBtn");
+const litePinkBtn = document.getElementById("litePinkBtn");
+const pastelPurpleBtn = document.getElementById("pastelPurpleBtn");
+const darkPurpleBtn = document.getElementById("darkPurpleBtn");
 const purpleBtn = document.getElementById("purpleBtn");
+const litePurpleBtn = document.getElementById("litePurpleBtn");
 const blueBtn = document.getElementById("blueBtn");
-const lilacBtn = document.getElementById("lilacBtn");
+const liteBlueBtn = document.getElementById("liteBlueBtn");
+const tealBtn = document.getElementById("tealBtn");
+const liteTealBtn = document.getElementById("liteTealBtn");
+const orangeBtn = document.getElementById("orangeBtn");
 const yellowBtn = document.getElementById("yellowBtn");
 
 var color = "color";
 
+pencilBtn.onclick = function () {
+    color = "color"
+}
 
-greyBtn.onclick = function() {
-    color = "color";
-};
+eraserBtn.onclick = function () {
+    color = "clear"
+}
 
 blackBtn.onclick = function() {
     color = "black";
@@ -44,6 +58,18 @@ blackBtn.onclick = function() {
 
 whiteBtn.onclick = function() {
     color = "white";
+};
+
+darkPinkBtn.onclick = function() {
+    color = "darkPink";
+};
+
+pastelPinkBtn.onclick = function() {
+    color = "pastelPink";
+};
+
+litePinkBtn.onclick = function() {
+    color = "litePink";
 };
 
 pinkBtn.onclick = function() {
@@ -54,17 +80,41 @@ purpleBtn.onclick = function() {
     color="purple";
 };
 
-lilacBtn.onclick = function() {
-    color="lilac";
+darkPurpleBtn.onclick = function() {
+    color="darkPurple";
+};
+pastelPurpleBtn.onclick = function() {
+    color="pastelPurple";
+};
+litePurpleBtn.onclick = function() {
+    color="litePurple";
 };
 
 blueBtn.onclick = function() {
     color = "blue";
 };
 
+liteBlueBtn.onclick = function() {
+    color = "liteBlue";
+};
+
+orangeBtn.onclick = function() {
+    color = "orange";
+};
+
 yellowBtn.onclick = function() {
     color = "yellow";
 };
+
+tealBtn.onclick = function() {
+    color = "teal";
+};
+
+liteTealBtn.onclick = function() {
+    color = "liteTeal";
+};
+
+let colorArray = ["black", "white", "pink", "litePink", "darkPink", "pastelPink", "purple", "litePurple", "darkPurple", "pastelPurple", "orange", "teal", "liteTeal", "yellow", "blue", "liteBlue", "color"]
 
 
 
@@ -87,10 +137,20 @@ function colorSketch(){
 
             if (isMouseDown) {
 
-                gridCell.classList.remove("black", "white", "pink", "purple", "lilac", "yellow", "blue",)
+                gridCell.classList.remove(colorArray)
                 gridCell.classList.add(color);
 
             }
+
+
+        });
+
+                gridCell.addEventListener("click", ()=> {
+
+
+                gridCell.classList.remove(colorArray)
+                gridCell.classList.add(color);
+
 
 
         });
@@ -103,17 +163,17 @@ function colorSketch(){
 
 
  
-btn.addEventListener("click", function() {
+clearBtn.addEventListener("click", function() {
     let grid = document.querySelectorAll('.gridItem');
     grid.forEach((gridCell)=> {
-        gridCell.classList.remove("black", "white", "pink", "purple", "lilac", "yellow", "blue", "color")
+        gridCell.classList.remove("black", "white", "pink", "litePink", "darkPink", "pastelPink", "purple", "litePurple", "darkPurple", "pastelPurple", "orange", "teal", "liteTeal", "yellow", "blue", "liteBlue", "color")
        
      });
   
 });
 
 
-button.addEventListener("click", function() {
+gridBtn.addEventListener("click", function() {
 
 
    let input = prompt("Choose a number between 16 and 100:");
