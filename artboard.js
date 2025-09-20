@@ -218,10 +218,7 @@ gridBtn.addEventListener("click", function() {
 
                 let divs = (input ** 2);
 
-                console.log(input);
-                console.log(numRows);
-                console.log(numRows * numRows);
-                console.log(divs);
+            
 
                 for (let i=0; i < divs; i++) {
                 const newDiv = document.createElement('div');
